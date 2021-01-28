@@ -125,4 +125,44 @@ table {
 a {
   text-decoration: none; }
 
+* {
+  box-sizing: border-box; }
+
+body {
+  font-family: 'Playfair Display', serif;
+  font-weight: 400; }
+
+.intro-header, .link {
+  text-transform: uppercase; }
+
+.wrap {
+  width: 1200px;
+  margin: 0 auto; }
+
+.intro {
+  margin: 0 auto;
+  width: 1062px;
+  height: 770px;
+  padding-top: 70px; }
+  .intro .heading {
+    margin-bottom: 72px;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .intro .heading .intro-header {
+      font-family: 'Inconsolata', monospace;
+      font-size: 30px;
+      font-weight: 400;
+      letter-spacing: 6px;
+      margin-right: 370px; }
+    .intro .heading .intro-links a.link {
+      color: #666666;
+      font-size: 14px;
+      transition: all 1s; }
+    .intro .heading .intro-links a.link:hover {
+      color: black;
+      transition: all 1s; }
+    .intro .heading .intro-links a.link:not(:last-child) {
+      margin-right: 100px; }
+
 /*# sourceMappingURL=style.css.map */

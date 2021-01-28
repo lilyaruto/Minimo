@@ -1,2 +1,69 @@
-@import "../sass/reset.scss"
+@import "../sass/reset.scss";
 
+@mixin header_font {
+    font-family: 'Inconsolata', monospace;
+    font-size: 30px;
+    font-weight: 400;
+    letter-spacing: 6px;
+}
+
+@mixin regular_text {
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+}
+
+@mixin photo_anotation {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    @include regular_text();
+}
+
+.intro-header, .link {
+    text-transform: uppercase;
+}
+
+.wrap {
+    width: 1200px;
+    margin: 0 auto;
+    //background-color: red;
+}
+
+.intro {
+    margin: 0 auto;
+    width: 1062px;
+    height: 770px;
+    //background-color: green;
+    padding-top: 70px;
+    .heading {
+        margin-bottom: 72px;
+        display: flex;
+        //background-color: blue;
+        justify-content: center;
+        align-items: center;
+        .intro-header {
+            @include header_font();
+            margin-right: 370px;
+        }
+        .intro-links {
+            //background-color: yellow;
+            a.link {
+                color: #666666;
+                font-size: 14px;
+                transition: all 1s;
+            }
+            a.link:hover {
+                color: black;
+                transition: all 1s;
+            }
+            a.link:not(:last-child) {
+                margin-right: 100px;
+            }
+        }
+    }
+}
