@@ -10,10 +10,15 @@
 @mixin regular_text {
     font-family: 'Playfair Display', serif;
     font-weight: 400;
+    color: #666666;
 }
 
 @mixin photo_anotation {
     font-family: 'Ubuntu', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #cc9999;
 }
 
 * {
@@ -28,42 +33,82 @@ body {
     text-transform: uppercase;
 }
 
+.anotation {
+    @include photo_anotation();
+}
+
+.title {
+    @include regular_text();
+    font-size: 30px;
+}
+
+.text {
+    @include regular_text();
+    font-size: 14px;
+}
+
 .wrap {
     width: 1200px;
     margin: 0 auto;
     //background-color: red;
-}
-
-.intro {
-    margin: 0 auto;
-    width: 1062px;
-    height: 770px;
-    //background-color: green;
-    padding-top: 70px;
-    .heading {
-        margin-bottom: 72px;
-        display: flex;
-        //background-color: blue;
-        justify-content: center;
-        align-items: center;
-        .intro-header {
-            @include header_font();
-            margin-right: 370px;
-        }
-        .intro-links {
-            //background-color: yellow;
-            a.link {
-                color: #666666;
-                font-size: 14px;
-                transition: all 1s;
-            }
-            a.link:hover {
+    .intro {
+        margin: 0 auto;
+        width: 1062px;
+        height: 770px;
+        //background-color: green;
+        padding-top: 70px;
+        .heading {
+            margin-bottom: 72px;
+            display: flex;
+            //background-color: blue;
+            justify-content: center;
+            align-items: center;
+            .intro-header {
+                @include header_font();
                 color: black;
-                transition: all 1s;
+                margin-right: 370px;
             }
-            a.link:not(:last-child) {
-                margin-right: 100px;
+            .intro-links {
+                //background-color: yellow;
+                a.link {
+                    color: #666666;
+                    font-size: 14px;
+                    transition: all 1s;
+                }
+                a.link:hover {
+                    color: black;
+                    transition: all 1s;
+                }
+                a.link:not(:last-child) {
+                    margin-right: 100px;
+                }
             }
+        }
+    }
+    
+    .text_block {
+        margin: 0 auto;
+        width: 900px;
+        height: 486px;
+        //background-color: blue;
+        .text_block-anotation {
+            margin-bottom: 28px;
+            //background-color: brown;
+        }
+        .text_block-title {
+            margin-bottom: 34px;
+        }
+        .text_block-text {
+            margin-bottom: 52px;
+            line-height: 1.5;
+        }
+        .text_block-comment_link {
+            @include photo_anotation();
+            transition: all 0.5s;
+        }
+        .text_block-comment_link:hover {
+            color: #686256;
+            transition: all 0.5s;
         }
     }
 }

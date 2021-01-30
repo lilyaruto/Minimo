@@ -130,39 +130,80 @@ a {
 
 body {
   font-family: 'Playfair Display', serif;
-  font-weight: 400; }
+  font-weight: 400;
+  color: #666666; }
 
 .intro-header, .link {
   text-transform: uppercase; }
 
+.anotation {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #cc9999; }
+
+.title {
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  color: #666666;
+  font-size: 30px; }
+
+.text {
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  color: #666666;
+  font-size: 14px; }
+
 .wrap {
   width: 1200px;
   margin: 0 auto; }
-
-.intro {
-  margin: 0 auto;
-  width: 1062px;
-  height: 770px;
-  padding-top: 70px; }
-  .intro .heading {
-    margin-bottom: 72px;
-    display: flex;
-    justify-content: center;
-    align-items: center; }
-    .intro .heading .intro-header {
-      font-family: 'Inconsolata', monospace;
-      font-size: 30px;
-      font-weight: 400;
-      letter-spacing: 6px;
-      margin-right: 370px; }
-    .intro .heading .intro-links a.link {
-      color: #666666;
+  .wrap .intro {
+    margin: 0 auto;
+    width: 1062px;
+    height: 770px;
+    padding-top: 70px; }
+    .wrap .intro .heading {
+      margin-bottom: 72px;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .wrap .intro .heading .intro-header {
+        font-family: 'Inconsolata', monospace;
+        font-size: 30px;
+        font-weight: 400;
+        letter-spacing: 6px;
+        color: black;
+        margin-right: 370px; }
+      .wrap .intro .heading .intro-links a.link {
+        color: #666666;
+        font-size: 14px;
+        transition: all 1s; }
+      .wrap .intro .heading .intro-links a.link:hover {
+        color: black;
+        transition: all 1s; }
+      .wrap .intro .heading .intro-links a.link:not(:last-child) {
+        margin-right: 100px; }
+  .wrap .text_block {
+    margin: 0 auto;
+    width: 900px;
+    height: 486px; }
+    .wrap .text_block .text_block-anotation {
+      margin-bottom: 28px; }
+    .wrap .text_block .text_block-title {
+      margin-bottom: 34px; }
+    .wrap .text_block .text_block-text {
+      margin-bottom: 52px;
+      line-height: 1.5; }
+    .wrap .text_block .text_block-comment_link {
+      font-family: 'Ubuntu', sans-serif;
+      font-weight: 300;
       font-size: 14px;
-      transition: all 1s; }
-    .intro .heading .intro-links a.link:hover {
-      color: black;
-      transition: all 1s; }
-    .intro .heading .intro-links a.link:not(:last-child) {
-      margin-right: 100px; }
+      text-transform: uppercase;
+      color: #cc9999;
+      transition: all 0.5s; }
+    .wrap .text_block .text_block-comment_link:hover {
+      color: #686256;
+      transition: all 0.5s; }
 
 /*# sourceMappingURL=style.css.map */
