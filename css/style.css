@@ -131,7 +131,8 @@ a {
 body {
   font-family: 'Playfair Display', serif;
   font-weight: 400;
-  color: #666666; }
+  color: #666666;
+  line-height: 1.5; }
 
 .intro-header, .link {
   text-transform: uppercase; }
@@ -147,12 +148,14 @@ body {
   font-family: 'Playfair Display', serif;
   font-weight: 400;
   color: #666666;
+  line-height: 1.5;
   font-size: 30px; }
 
 .text {
   font-family: 'Playfair Display', serif;
   font-weight: 400;
   color: #666666;
+  line-height: 1.5;
   font-size: 14px; }
 
 .wrap {
@@ -178,7 +181,8 @@ body {
       .wrap .intro .heading .intro-links a.link {
         color: #666666;
         font-size: 14px;
-        transition: all 1s; }
+        transition: all 1s;
+        text-decoration: none; }
       .wrap .intro .heading .intro-links a.link:hover {
         color: black;
         transition: all 1s; }
@@ -193,17 +197,57 @@ body {
     .wrap .text_block .text_block-title {
       margin-bottom: 34px; }
     .wrap .text_block .text_block-text {
-      margin-bottom: 52px;
-      line-height: 1.5; }
+      margin-bottom: 52px; }
     .wrap .text_block .text_block-comment_link {
       font-family: 'Ubuntu', sans-serif;
       font-weight: 300;
       font-size: 14px;
       text-transform: uppercase;
       color: #cc9999;
-      transition: all 0.5s; }
+      transition: all 0.5s;
+      text-decoration: none; }
     .wrap .text_block .text_block-comment_link:hover {
       color: #686256;
       transition: all 0.5s; }
+  .wrap .grid {
+    margin: 0 auto;
+    width: 900px;
+    height: 1210px; }
+    .wrap .grid .grid-row .grid-photo {
+      margin-bottom: 32px; }
+    .wrap .grid .grid-row .grid-anotation {
+      margin-bottom: 28px; }
+    .wrap .grid .grid-row .grid-title {
+      margin-bottom: 34px; }
+    .wrap .grid .grid-row:first-child {
+      margin-bottom: 132px; }
+  .wrap .email {
+    margin: 0 auto;
+    width: 1200px;
+    height: 287px;
+    background-color: #f0f0f0;
+    text-align: center; }
+    .wrap .email .email-title {
+      margin-top: 65px;
+      margin-bottom: 80px;
+      color: #333333;
+      display: inline-block; }
+    .wrap .email .mail_block {
+      position: relative;
+      display: flex;
+      width: 400px;
+      margin: 0 auto; }
+      .wrap .email .mail_block .email-field {
+        border: none;
+        width: 400px;
+        border-bottom: 1px solid #333333;
+        background-color: #f0f0f0; }
+      .wrap .email .mail_block .email-field[type=email]:focus {
+        outline: none; }
+      .wrap .email .mail_block .email-send_button {
+        border: none;
+        border-bottom: 1px solid #333333; }
+      .wrap .email .mail_block .email-send_button:focus {
+        outline: none; }
 
 /*# sourceMappingURL=style.css.map */

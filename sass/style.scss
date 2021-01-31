@@ -11,6 +11,7 @@
     font-family: 'Playfair Display', serif;
     font-weight: 400;
     color: #666666;
+    line-height: 1.5;
 }
 
 @mixin photo_anotation {
@@ -74,6 +75,7 @@ body {
                     color: #666666;
                     font-size: 14px;
                     transition: all 1s;
+                    text-decoration: none;
                 }
                 a.link:hover {
                     color: black;
@@ -100,15 +102,72 @@ body {
         }
         .text_block-text {
             margin-bottom: 52px;
-            line-height: 1.5;
         }
         .text_block-comment_link {
             @include photo_anotation();
             transition: all 0.5s;
+            text-decoration: none;
         }
         .text_block-comment_link:hover {
             color: #686256;
             transition: all 0.5s;
+        }
+    }
+
+    .grid {
+        margin: 0 auto;
+        width: 900px;
+        height: 1210px;
+        //background-color: cadetblue;
+        .grid-row {
+            .grid-photo {
+                margin-bottom: 32px;
+            }
+            .grid-anotation {
+                margin-bottom: 28px;
+            }
+            .grid-title {
+                margin-bottom: 34px;
+            }
+        }
+        .grid-row:first-child {
+            margin-bottom: 132px;
+        } 
+    }
+
+    .email {
+        margin: 0 auto;
+        width: 1200px;
+        height: 287px;
+        background-color: #f0f0f0;
+        text-align: center;
+        .email-title {
+            margin-top: 65px;
+            margin-bottom: 80px;
+            color: #333333;
+            display: inline-block;
+        }
+        .mail_block {
+            position: relative;
+            display: flex;
+            width: 400px;
+            margin: 0 auto;
+            .email-field {
+                border: none;
+                width: 400px;
+                border-bottom: 1px solid #333333;
+                background-color: #f0f0f0;
+            }
+            .email-field[type=email]:focus {
+                outline: none;
+            }
+            .email-send_button {
+                border: none;
+                border-bottom: 1px solid #333333;
+            }
+            .email-send_button:focus {
+                outline: none;
+            }
         }
     }
 }
